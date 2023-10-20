@@ -13,8 +13,8 @@ Four CSV files contain data on population, Gross Domestic Product (GDP), and lif
 
 #Reproducing the report results
 
-File "" in this repository contains a command that runs the R script ("reproducibility_exercise.Rmd") and reproduces the report included in the "output" directory.
-Therefore, to reproduce the report results, you must run file "".
+File "ADD" in this repository contains a command that runs the R script ("reproducibility_exercise.Rmd") and reproduces the report included in the "output" directory.
+Therefore, to reproduce the report results, you must run file "ADD".
 
 The report consists of 5 steps: 
 
