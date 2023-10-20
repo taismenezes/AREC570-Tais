@@ -11,10 +11,7 @@ You can find the data used in the exercise in the "inputs" directory.
 Four CSV files contain data on population, Gross Domestic Product (GDP), and life expectancy for different countries/continents in 1952, 1957, 1962, and 1967. 
 
 
-#Reproducing the report results
-
-File "ADD" in this repository contains a command that runs the R script ("reproducibility_exercise.Rmd") and reproduces the report included in the "output" directory.
-Therefore, to reproduce the report results, you must run file "ADD".
+#Report
 
 The report consists of 5 steps: 
 
@@ -27,4 +24,15 @@ The report consists of 5 steps:
 4)Regressing life expectancy on gdp per capita and displaying the regression table.
 
 
+You can find the report file in the "output" directory.
 
+
+#Reproducing the report results
+
+File "run_markdown.bat" in this repository contains a command that runs the R script ("reproducibility_exercise.Rmd") and reproduces the report "reproducibility_exercise.pdf".
+To reproduce the report results, you must:
+i)Open "run_markdown.bat" with a text editor; 
+ii)set RSCRIPT="THE DIRECTORY FOR R IN YOUR COMPUTER"
+iii)set RSCRIPT_FILE="PATH TO THE R MARKDOWN FILE"
+iv)save the new "run_markdown.bat"
+v) run "run_markdown.bat"

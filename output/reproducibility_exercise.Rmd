@@ -1,23 +1,36 @@
-#This code organizes the data from CSV files into a data frame and creates new columns
+---
+title: "Reproducibility Exercise"
+output: pdf_document
+---
 
-#Load the required package for reading data
+This code organizes the data from CSV files into a data frame and creates new columns
+
+Load the required package for reading data
+```{r}
 library(readr)
 library(ggplot2)
 library(stargazer)
+```
 
-#1)Read the data into data frame
+1) Read the data into data frame
+```{r}
 data1 <- read_csv('inputs/gdp_52-67.csv')
 data2 <- read_csv('inputs/le_52-67.csv')
+```
 
-#2)Merge data frames based on continent, country, and year
+2) Merge data frames based on continent, country, and year
+```{r}
 merged_df <- merge(data1, data2, by = c("continent", "country", "year"))
 stargazer(merged_df, type = "text")
+```
 
-#3)Create a new column with GDP per capita
+3) Create a new column with GDP per capita
+```{r}
 merged_df$gdpPercap <- merged_df$gdp / merged_df$pop
+```
 
-
-#4)Visualize life expectancy and gdp per capita over time for Canada in the 1950s and 1960s using a line plot
+4) Visualize life expectancy and gdp per capita over time for Canada in the 1950s and 1960s using a line plot
+```{r}
 # Filter the data for Canada
 canada_data <- merged_df[merged_df$country == "Canada", ]
 
@@ -45,11 +58,14 @@ ggplot(data = canada_data, aes(x = year)) +
   
   # Customize theme
   theme_minimal()
+```
 
-#5)Regress life expectancy on gdp per capita and display the regression table
+5) Regress life expectancy on gdp per capita and display the regression table
+```{r}
 # Fit a linear regression model
 model <- lm(lifeExp ~ gdpPercap, data = merged_df)
 
 # Display the regression table
 stargazer(model, type = "text", style = "aer")
+```
 

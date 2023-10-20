@@ -69,4 +69,3 @@ model <- lm(lifeExp ~ gdpPercap, data = merged_df)
 stargazer(model, type = "text", style = "aer")
 ```
 
-
