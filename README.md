@@ -1,3 +1,4 @@
-# AREC570-Tais
+#AREC 570 Reproducibility Exercise
+Taís de Menezes
 
-This is a test readme 
+Instructions are presented in https://jbayham.github.io/AREC570/reproducibility/
